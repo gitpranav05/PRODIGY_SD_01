@@ -8,7 +8,6 @@ def conv():
         tmsg.showerror("Unit Error", "Please select a valid SI unit")
 
     elif unit.get()== "Celcius":
-        print("Hello")
         C=value.get()
         K=C+273.15
         F=(9/5)*C + 32
