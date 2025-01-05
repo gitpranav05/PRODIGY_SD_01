@@ -2,6 +2,12 @@ from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox as tmsg
 
+try:
+    from ctypes import windll
+    windll.shcore.SetProcessDpiAwareness(1)
+except:
+    pass
+
 def conv():
 
     if unit.get()== "Select Unit":
@@ -31,7 +37,7 @@ def conv():
         q1val.set(f"{C:.2f} Celcius and {K:.2f} Kelvin")
 
 root =Tk()
-root.geometry("655x170")
+root.geometry("955x240")
 root.title("Temperature Converter")
 text= Label(root, text="Temperature Converter", font="comicsans 18 bold",justify="center")
 text.grid(row=0,column=2)
